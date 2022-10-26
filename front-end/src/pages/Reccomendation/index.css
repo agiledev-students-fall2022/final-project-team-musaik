@@ -1,0 +1,11 @@
+.Reccomendation{
+    background-color: rgb(102, 51, 153);
+}
+
+.Album-Card{
+    background-color: rgb(60, 60, 60);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 80vh;
+
+}
