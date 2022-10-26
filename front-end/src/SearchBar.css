@@ -1,0 +1,29 @@
+#home-search{
+    border-style: none;
+    border: silver;
+    border-radius: 20px;
+    background-color: #d8d8d8;
+    height: 35px;
+    width: 300px;
+}
+
+.Search-Burger{
+    padding-top: 20px;
+    display: flex;
+}
+
+input{
+    text-indent: 10px;
+}
+
+img{
+    width: 30px;
+    height: 30px;
+    padding-right: 15px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
