@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import SpotifyPlayer from "react-spotify-web-playback"
 
 
-export default function SpotPlayer({ accessToken, trackUri }) {
+export default function SpotPlayer({ accessToken, trackUri, offset }) {
   const [play, setPlay] = useState(false)
 
   useEffect(() => setPlay(true), [trackUri])
@@ -16,6 +16,7 @@ export default function SpotPlayer({ accessToken, trackUri }) {
       }}
       play={play}
       uris={trackUri ? [trackUri] : []}
+      offset={offset}
     />
   ) 
 }

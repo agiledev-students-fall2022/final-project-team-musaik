@@ -7,11 +7,6 @@ import './index.css';
 
 
 function Radio(props) {
-    const getUser = async () => {
-        const user = await axios.get('/user');
-        return user.data;
-    };
-
     const [user, setUser] = useState(null);
     const [accessToken, setAccessToken] = useState(null);
     const [trackUri, setTrackUri] = useState("spotify:track:4iV5W9uYEdYUVa79Axb7Rh"); // default track
@@ -20,7 +15,13 @@ function Radio(props) {
 
     const [playlists, setPlaylists] = useState([]);
     const [open, setOpen] = useState(false);
+    const [progressMs, setProgressMs] = useState(0);
 
+    const getUser = async () => {
+        const user = await axios.get('/user');
+        return user.data;
+    };
+    
     useEffect(() => {
         getUser().then((user) => {
             setUser(user);
@@ -33,9 +34,13 @@ function Radio(props) {
         setTrackUri("spotify:track:" + trackId);
     }
 
+    // set the track offset to start playing (ms)
+    const setOffset = (progressMs) => {
+        setProgressMs(progressMs);
+    }
+
     const setPlaylingList = (playlistId) => {
         setOpen(!open);
-        setTrackUri("spotify:playlist:" + playlistId);
         axios.post('/sessions/create-session', {
             playlistId: playlistId,
         }).then((res) => {
@@ -47,6 +52,8 @@ function Radio(props) {
     const changeCurrentSession = (session) => {
         setCurrentSession(session);
         setTrack(session.playlist[0]);
+        // setOffset(0);
+        setOffset(session.progressMs);
     }
 
     //open dropdown
@@ -92,8 +99,8 @@ function Radio(props) {
                 <Bubble className={`bubble_${i+1}`} click={() => changeCurrentSession(session)} session={session} id={i+1}/>
             ))}
         </div>
-         <div className="Player-Container">
-            <SpotPlayer accessToken={accessToken} trackUri={trackUri} />
+        <div className="Player-Container">
+            <SpotPlayer accessToken={accessToken} trackUri={trackUri} offset={progressMs}/>
         </div>
         <NavBar/>
         </>

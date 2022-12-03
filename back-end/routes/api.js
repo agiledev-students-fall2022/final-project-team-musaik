@@ -29,7 +29,8 @@ router.post('/create-session', async (req, res) => {
             host: host_id,
             playlist: session_tracks,
             listeners: [],
-            listener_count: 0,
+            progressMs: 1000, // default progress
+            listener_count: 0, // default listener count
         })
         // send the created session to client
         return res.json({
@@ -73,30 +74,30 @@ router.post('/join-session', (req, res) => {
     });
 });
 
-router.post('/change-song', async (req, res) => {
-    const session = req.session.session;
-    const users = session.joined_users;
-    const host = session.host;
+// router.post('/change-song', async (req, res) => {
+//     const session = req.session.session;
+//     const users = session.joined_users;
+//     const host = session.host;
 
-    spotifyApi.setAccessToken(host.access_token);
-    spotifyApi.setRefreshToken(host.refresh_token);
+//     spotifyApi.setAccessToken(host.access_token);
+//     spotifyApi.setRefreshToken(host.refresh_token);
 
-    const playback = await spotifyApi.getMyCurrentPlaybackState();
-    const currentSong = playback.body.item.uri;
+//     const playback = await spotifyApi.getMyCurrentPlaybackState();
+//     const currentSong = playback.body.item.uri;
 
-    session.currentSong = currentSong;
+//     session.currentSong = currentSong;
 
-    users.forEach(async (user) => {
-        spotifyApi.setAccessToken(user.access_token);
-        spotifyApi.setRefreshToken(user.refresh_token);
-        await spotifyApi.addToQueue(session.currentSong);
-    });
+//     users.forEach(async (user) => {
+//         spotifyApi.setAccessToken(user.access_token);
+//         spotifyApi.setRefreshToken(user.refresh_token);
+//         await spotifyApi.addToQueue(session.currentSong);
+//     });
 
-    res.json({
-        session: session
-    });
+//     res.json({
+//         session: session
+//     });
 
-});
+// });
 
 router.get('/playlist-search', async (req, res) => {
     const user = req.session.user;
