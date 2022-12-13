@@ -52,7 +52,7 @@ router.get('/top-sessions', async (req, res) => {
     spotifyApi.setAccessToken(accessToken);
     try {
         // retrieve top sessions from database
-        const sessions = await Session.find().sort('listener_count').limit(6);
+        const sessions = await Session.find().sort({'createdAt':-1}).limit(6); // retrieve latest sessions for now
         // send the top sessions to client
         return res.json({
             sessions: sessions,
