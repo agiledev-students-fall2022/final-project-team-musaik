@@ -1,0 +1,75 @@
+.bubble {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble:hover{
+    cursor: pointer;
+}
+
+.bubble-1 {
+    width: 90px;
+    height: 90px;
+    left: 30vw;
+    top: 30vh;
+}
+
+.bubble-2 {
+    width: 200px;
+    height: 200px;
+    right: 20vw;
+    top: 15vh;
+}
+
+.bubble-3 {
+    width: 170px;
+    height: 170px;
+    left: 20vw;
+    top: 10vh;
+}
+
+.bubble-4 {
+    width: 110px;
+    height: 110px;
+    right: 25vw;
+    bottom: 5vh;
+}
+
+.bubble-5 {
+    width: 130px;
+    height: 130px;
+    left: 20vw;
+}
+
+.bubble-6 {
+    right: 20vw;
+    bottom: 15vh;
+}
+
+.bubble p {
+    color: white;
+    font-weight: bold;
+}
+
+.host {
+    font-size: 12px;
+}
+
+.track-title {
+    padding-top: 30px;
+    font-size: 16px;
+}
+
+.track-artist {
+    font-size: 14px;
+}

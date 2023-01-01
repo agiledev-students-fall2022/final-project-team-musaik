@@ -1,0 +1,58 @@
+name: Build & Deploy
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ "master" ] # Will run on push to the "master" branch
+ 
+jobs:
+  build:
+    runs-on: self-hosted # The type of runner that the job will run on
+ 
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 18
+      uses: actions/setup-node@v3.5.0
+      with:
+        node-version: '18.x' 
+        cache: 'npm'
+   
+    - name: Install dependencies
+      run: |
+        git config --global url."git@github.com:".insteadOf git://github.com/ && npm install
+        cd back-end
+        npm install
+        cd ../front-end
+        npm install
+ 
+    - name: Creating a Production Build of React App
+      env:
+        CI: false
+      run: | 
+        cd front-end
+        npm run build
+
+  create-env-file:
+    runs-on: self-hosted
+    needs: build # Run only after the 'build' job is completed
+ 
+    steps:
+    - name: Create .env file
+      # Creates an '.env' file with environment variables
+      run: |
+        touch .env
+        echo NODE_ENV=${{ secrets.NODE_ENV }} >> .env
+        echo ROOT_URL=${{ secrets.ROOT_URL }} >> .env
+        echo CLIENT_ID=${{ secrets.CLIENT_ID }} >> .env
+        echo CLIENT_SECRET=${{ secrets.CLIENT_SECRET }} >> .env
+        echo SESSION_SECRET=${{ secrets.SESSION_SECRET }} >> .env
+        echo DB_CONNECTION_STRING=${{ secrets.DB_CONNECTION_STRING }} >> .env
+  deploy:
+    runs-on: self-hosted
+    needs: [build, create-env-file] # Run only after the 'build' and 'create-envfile' job is completed
+    steps:
+    - name: Deploy to production
+      # Starts your node js app in 'PM2'
+      run: |
+        pm2 stop deployment.config.js
+        pm2 start deployment.config.js
+        pm2 save

@@ -1,0 +1,27 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(60, 60, 60);
+    height: 90vh;
+    overflow: scroll;
+}
+
+.appName{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.Player-Container {
+    position: fixed ;
+    bottom: 8vh ;
+    margin: 0px;
+    padding:0;
+    background-color: #C1DEDC;
+    width: 100%;
+}

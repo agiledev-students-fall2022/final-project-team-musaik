@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "react-bootstrap": "^2.5.0",
+    "react-spinners": "^0.13.7",
+    "spotify-web-api-node": "^5.0.2"
+  }
+}

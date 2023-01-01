@@ -1,0 +1,258 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200&display=swap');
+
+.homeContainer{
+  display: flex;
+  width: 100%;
+  color: #FFFFFF
+}
+
+.post {
+  width: 100%;
+  /* border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68); */
+  /* box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68); */
+  margin: 20px 0;
+}
+
+.postText {
+  margin-left: 15px;
+  padding-bottom: 15px;
+}
+
+.postWrapper {
+  padding: 0px;
+}
+
+.postTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.postTopLeft {
+  display: flex;
+  align-items: center;
+}
+
+.postProfileImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 15px;
+}
+
+.postUsername {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.postDate{
+    font-size: 12px;
+}
+
+.postCenter{
+    margin: 20px 0;
+}
+
+.postImg{
+    margin-top: 20px;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.postBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headphonesIcon {
+  width: 15px;
+  height: 15px;
+
+}
+
+.postBottomLeft{
+    display: flex;
+    align-items: center;   
+}
+
+.postBottomRight span{
+   margin-right: 15px;
+}
+
+.likeIcon{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.postLikeCounter{
+    font-size: 15px;
+    margin-right: 10px;
+
+}
+
+.postCommentText{
+    cursor: pointer;
+    border-bottom: 1px dashed gray;
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif; */
+    
+}
+
+body {
+    background-color: #535353;
+
+}
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.c-player {
+    margin-top: 10px;;
+    display: block;
+    background-color: #212121;
+    padding: 5px;
+    border-radius: 16px;
+    padding-bottom: 30px;
+    min-height: 80vh;
+    max-height: 90vh;
+}
+
+.c-player h3{
+    color: #FFFFFF;
+    font-size: 18px;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    text-align: center;
+}
+
+.c-player h4{
+    color: #FFFFFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.c-player p {
+    color: #AAA;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.c-player--details .details-img {
+    position: relative;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.c-player--details .details-img img{
+    display: block;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 70vw;
+    border-radius: 5%;
+
+}
+
+.c-player--details .details-title {
+    color: #EEE;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+   
+}
+
+.c-player--details .details-artist {
+    color: #FFFFFF;
+    font-size: 15px;
+    text-align: center;
+    /* margin-bottom: 10px; */
+    margin-top: -5px;
+}
+
+.c-player--controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.c-player--controls .play-btn {
+    display: flex;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    color:  #212121;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.c-player--controls .skp-btn {
+    display: flex;
+    margin: 0 5px;
+    padding: 15px;
+    background: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #212121;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.DropdownButton {
+  color: white;
+
+  background-color: gray;
+  border-radius: 5px;
+  padding: 5px;
+  width: max-content;
+  
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.DropdownElement {
+  color: #FFF;
+  background-color: green;
+  border-radius: 5px;
+  padding: 5px;
+  width:max-content;
+}

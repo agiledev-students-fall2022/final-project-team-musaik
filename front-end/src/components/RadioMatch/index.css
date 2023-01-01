@@ -1,0 +1,41 @@
+.Match{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin: 20px;
+}
+
+.Match-Card{
+    display:flex;
+    flex-direction: row;   
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.user{
+    padding: 0;
+}
+.match{
+    z-index: 1;
+    margin-left: 0;
+    margin-bottom: -50px;
+    padding: 0;
+}
+
+h2{
+    margin: 15px;
+}
+
+
+
