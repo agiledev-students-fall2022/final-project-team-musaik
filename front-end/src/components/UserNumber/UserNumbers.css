@@ -1,0 +1,35 @@
+.User-Card{
+    display: flex;
+    justify-content: center;
+}
+
+.Followers-Container{
+    
+    margin-top: 0px;
+    color: white;
+
+}
+
+h4{
+    margin: 10px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.Edit-Button{
+    border-radius: 20px;
+    border-style: none;
+    width:  124px;
+    height: 35px;
+    font-size: 15px;
+}
+
+.Button-Container{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.Following-Container{
+    color: white;
+}

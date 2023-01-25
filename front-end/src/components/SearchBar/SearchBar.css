@@ -1,0 +1,47 @@
+#home-search{
+    border-style: none;
+    border: silver;
+    border-radius: 20px;
+    background-color: #d8d8d8;
+    height: 35px;
+    width: 300px;
+}
+
+
+#home-send{
+    border-style: none;
+    border: black;
+    border-radius: 23px;
+    background-color: #d8d9d8;
+    height: 30px;
+    width: 30px;
+}
+
+.Search-Burger{
+    padding-top: 20px;
+    display: flex;
+}
+
+input{
+    text-indent: 10px;
+}
+
+img{
+    width: 50px;
+    height: 30px;
+    padding-right: 15px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+button{
+    margin-left: 10px;
+    border-radius: 50px;
+    border-style: none;
+    width: 70px
+}
+

@@ -1,0 +1,32 @@
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+
+.Album-PlaceHolder{
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    padding: 0 5px 5px 5px;
+    border-radius: 20%;
+}
+
+.Category-Name{
+    color: white;
+    padding:   20px 0px 0px 15px;
+    font-size: 20px;    
+}
+
+.Carousel{
+    margin-left: 15px;
+}
+
+.caption {
+    display: block;
+    font-size: 10px;
+    color: white;
+}
+
+/*Add shadow under albuums*/

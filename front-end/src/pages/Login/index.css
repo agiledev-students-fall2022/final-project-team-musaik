@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.Login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #3F414E;
+    font-family: 'Roboto', sans-serif;
+}
+
+.musaik-logo {
+    width: 300px;
+    height: 300px;
+}
+
+.login-spotify {
+    width: 300px;
+    height: 50px;
+    background-color: black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-spotify p {
+    font-size: 18px;
+    padding: 0 20px;
+    color: white;
+}
+
+.login-spotify img {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+}
+
+.login-spotify:hover {
+    width: 300px;
+    height: 50px;
+    background-color: purple;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

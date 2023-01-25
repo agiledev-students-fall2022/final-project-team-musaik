@@ -1,20 +1,74 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=8772745&assignment_repo_type=AssignmentRepo)
-# Project Repository
+# MUSAIK
 
-This repository will be used for team projects.
+### Vision
+The Musaik team has a vision of making connection through music a much easier process. We want our users to view our app as a hub for finding and connecting with others that share the same musical taste. 
 
-Several sets of instructions are included in this repository. They should each be treated as separate assignments with their own due dates and sets of requirements.
+### Description
+New music discovery is a souless, intensive experience. If you want to find new artists, you'll have to sift through playlist on top of playlist for hours. Musaik will connect users through streaming parties and auto-match chats. Users will discover new music easily and enjoyably.
 
-1. See the [App Map & Wireframes](instructions-0a-app-map-wireframes.md) and [Prototyping](./instructions-0b-prototyping.md) instructions for the requirements of the initial user experience design of the app.
+### Deployment
+~~Our app is now running at https://www.musaik.ml.~~ (deprecated from 01/2023)
+- CI & CD is also implemented using GitHub Actions.
 
-1. Delete the contents of this file and replace with the contents of a proper README.md, as described in the [project setup instructions](./instructions-0c-project-setup.md)
+### How to Run
+How to run our app on your computer.
+1. Download npm if it hasn't been installed.
+```
+# check if npm is already installed
+npm -v
 
-1. See the [Sprint Planning instructions](instructions-0d-sprint-planning.md) for the requirements of Sprint Planning for each Sprint.
+# if not, install npm on your computer
+npm install -g npm
+```
+2. Install all the requirements.
+```
+# root directory
+npm install 
 
-1. See the [Front-End Development instructions](./instructions-1-front-end.md) for the requirements of the initial Front-End Development.
+# front-end
+cd front-end
+npm install
 
-1. See the [Back-End Development instructions](./instructions-2-back-end.md) for the requirements of the initial Back-End Development.
+# back-end
+cd ../back-end
+npm install
+```
+3. Create a build file at ```/front-end```.
+```
+# under front-end directory
+npm run build
+```
+4. Create a ```.env``` file under the root directory with necessary credentials. For the vaules with [], you need to provide your own credentials. 
+* CLIENT_ID, CLIENT_SECRET: Your dedicated ID and secret key from Spotify Developer account
+* SESSION_SECRET: Your secret key for expression session
+* DB_CONNECTION_STRING: MongoDB connection string
+```
+NODE_ENV=production
+ROOT_URL=http://localhost:8080
+CLIENT_ID=[SPOTIFY_CLIENT_ID]
+CLIENT_SECRET=[SPOTIFY_CLIENT_SECRET]
+SESSION_SECRET=[YOUR_SESSION_SECRET]
+DB_CONNECTION_STRING=[YOUR_DB_CONNECTION_STRING]
+```
+5. Run the server.
+```
+cd back-end
+npm start
+```
+Now MUSAIK is running on http://localhost:8080.
 
-1. See the [Database Integration instructions](./instructions-3-database.md) for the requirements of integrating a database into the back-end.
+### Core team members
+- [Ahmad Almesned](https://github.com/Ahmadhcs)
+- [Alima Zhagufarova](https://github.com/alima2104)
+- [Chinedu Nnorom](https://github.com/chinedunnorom)
+- [Jeongin Lee](https://github.com/jjeongin)
+- [Ryan Rochmanofenna](https://github.com/ryanroch)
+- [Zain Faruqi](https://github.com/zain-faruqi)
 
-1. See the [Deployment instructions](./instructions-4-deployment.md) for the requirements of deploying an app.
+### History and Collaboration
+This project has started from [Zain](https://github.com/zain-faruqi)'s idea to build a social platform for music lovers where listners can recommend musics they love and connect with people who have similar taste.
+
+* [Contribution Guide for Our Core Team](CONTRIBUTING.md)
+
+### Resources
+* [UX Design Guide](UX-DESIGN.md)

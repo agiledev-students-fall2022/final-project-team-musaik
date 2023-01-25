@@ -1,0 +1,17 @@
+.Bubbles{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 4px;
+    margin-top: 30px;
+
+
+}
+
+
+
+.Top-Row{
+    display: flex;
+    justify-content: center;
+
+}
